@@ -1,0 +1,54 @@
+GET http://localhost:8000/api/listings HTTP/1.1
+
+###
+
+POST http://localhost:8000/api/listings/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc2ODUzMjI3LCJpYXQiOjE3NzY4NDk2MjcsImp0aSI6IjdhMWZmMWM5NjgwYTRkODY5OWY1MjY5Yjk2ZTExMmQzIiwidXNlcl9pZCI6IjQifQ.WCePz7DHQBrdfKJyB3vQD_3WRplC8jnI7pxWQfEcAUw
+
+{
+     
+    "title": "thin",
+    "description": "64GB RAM",
+    "price": "590.00",
+    "city": "berlin",
+    "category": 1
+    
+}
+
+###
+
+PATCH http://localhost:8000/api/listings/1/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc2ODUzMjI3LCJpYXQiOjE3NzY4NDk2MjcsImp0aSI6IjdhMWZmMWM5NjgwYTRkODY5OWY1MjY5Yjk2ZTExMmQzIiwidXNlcl9pZCI6IjQifQ.WCePz7DHQBrdfKJyB3vQD_3WRplC8jnI7pxWQfEcAUw
+{
+     
+    "title": "Dell fold"
+    
+}
+
+###
+
+DELETE http://localhost:8000/api/listings/8/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc2ODUzMjI3LCJpYXQiOjE3NzY4NDk2MjcsImp0aSI6IjdhMWZmMWM5NjgwYTRkODY5OWY1MjY5Yjk2ZTExMmQzIiwidXNlcl9pZCI6IjQifQ.WCePz7DHQBrdfKJyB3vQD_3WRplC8jnI7pxWQfEcAUw
+
+###
+
+POST http://localhost:8000/api/token/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "void",
+    "password": "void"
+}
+
+
+###
+
+POST http://localhost:8000/api/token/refresh/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc3NzE3NzM5OSwiaWF0IjoxNzc3MDkwOTk5LCJqdGkiOiI4ZDFjZWQ4MzEzZjI0MjhhOGZkZjY5NThhNTU1OWUzMSIsInVzZXJfaWQiOiI0In0.FjbAFrbUMsD9istxtPDXcMf66fzg7bdot64ULHjFvNM"
+}
